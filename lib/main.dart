@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:quiz_app/start_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -13,9 +14,14 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         body: Center(
-          child: ColorFiltered(
-            colorFilter: ColorFilter.mode(Colors.red, BlendMode.hue),
-            child: Image.asset('assets/images/quiz-logo.png'),
+          child: Column(
+            children: [
+              ColorFiltered(
+                colorFilter: ColorFilter.mode(Colors.red, BlendMode.hue),
+                child: Image.asset('assets/images/quiz-logo.png'),
+              ),
+              const StartScreen(),
+            ],
           ),
         ),
       ),
