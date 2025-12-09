@@ -13,16 +13,16 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        body: Center(
-          child: Column(
-            children: [
-              ColorFiltered(
-                colorFilter: ColorFilter.mode(Colors.red, BlendMode.hue),
-                child: Image.asset('assets/images/quiz-logo.png'),
-              ),
-              const StartScreen(),
-            ],
+        body: Container(
+          decoration: const BoxDecoration(
+            gradient: LinearGradient(
+              colors: [
+                Color.fromARGB(255, 76, 13, 107),
+                Color.fromARGB(255, 120, 14, 165),
+              ],
+            ),
           ),
+          child: const StartScreen(),
         ),
       ),
     );
